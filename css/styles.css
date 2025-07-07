@@ -997,3 +997,27 @@ html {
     filter: brightness(1.1) contrast(1.1) !important;
     -webkit-filter: brightness(1.1) contrast(1.1) !important;
 }
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent; /* Made transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Always hidden */
+    transition: none; /* No transition */
+    pointer-events: none; /* Disable interaction */
+}
+
+.product-card:hover .product-overlay {
+    opacity: 0; /* Stay hidden on hover */
+}
+
+.product-overlay i {
+    display: none; /* Hide the eye icon */
+}
+
