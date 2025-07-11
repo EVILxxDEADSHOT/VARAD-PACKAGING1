@@ -1021,3 +1021,118 @@ html {
     display: none; /* Hide the eye icon */
 }
 
+/* Industries Section */
+.industries {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.industry-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.industry-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.industry-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.industry-item:hover .industry-icon {
+    background: linear-gradient(135deg, #E74C3C, #FF6B6B);
+    transform: scale(1.1);
+}
+
+.industry-icon i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.industry-item h3 {
+    color: #1B365D;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.industry-item:hover h3 {
+    color: #E74C3C;
+}
+
+/* Responsive Design for Industries */
+@media (max-width: 768px) {
+    .industries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .industry-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .industry-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    
+    .industry-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .industry-item h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .industry-item {
+        padding: 1rem 0.5rem;
+    }
+    
+    .industry-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .industry-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .industry-item h3 {
+        font-size: 0.9rem;
+    }
+}
+
+
