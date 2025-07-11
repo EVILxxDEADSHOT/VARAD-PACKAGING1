@@ -1021,7 +1021,7 @@ html {
     display: none; /* Hide the eye icon */
 }
 
-/* Industries Section */
+/* Industries Section - Colorful Icons */
 .industries {
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -1039,38 +1039,84 @@ html {
     text-align: center;
     padding: 2rem 1rem;
     background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    border: 1px solid rgba(102, 126, 234, 0.1);
+    border: 2px solid transparent;
 }
 
 .industry-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-    border-color: rgba(102, 126, 234, 0.3);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .industry-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-.industry-item:hover .industry-icon {
-    background: linear-gradient(135deg, #E74C3C, #FF6B6B);
-    transform: scale(1.1);
+/* Colorful backgrounds for each industry */
+.healthcare .industry-icon {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+}
+
+.petcare .industry-icon {
+    background: linear-gradient(135deg, #4834d4, #686de0);
+    box-shadow: 0 8px 20px rgba(72, 52, 212, 0.3);
+}
+
+.homecare .industry-icon {
+    background: linear-gradient(135deg, #00d2d3, #54a0ff);
+    box-shadow: 0 8px 20px rgba(0, 210, 211, 0.3);
+}
+
+.automotive .industry-icon {
+    background: linear-gradient(135deg, #ff9ff3, #f368e0);
+    box-shadow: 0 8px 20px rgba(255, 159, 243, 0.3);
+}
+
+.food .industry-icon {
+    background: linear-gradient(135deg, #feca57, #ff6348);
+    box-shadow: 0 8px 20px rgba(254, 202, 87, 0.3);
+}
+
+.pharma .industry-icon {
+    background: linear-gradient(135deg, #48dbfb, #0abde3);
+    box-shadow: 0 8px 20px rgba(72, 219, 251, 0.3);
+}
+
+.textile .industry-icon {
+    background: linear-gradient(135deg, #ff9ff3, #f368e0);
+    box-shadow: 0 8px 20px rgba(255, 159, 243, 0.3);
+}
+
+.agriculture .industry-icon {
+    background: linear-gradient(135deg, #7bed9f, #2ed573);
+    box-shadow: 0 8px 20px rgba(123, 237, 159, 0.3);
+}
+
+.consumer .industry-icon {
+    background: linear-gradient(135deg, #ff7675, #fd79a8);
+    box-shadow: 0 8px 20px rgba(255, 118, 117, 0.3);
+}
+
+.industrial .industry-icon {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
 }
 
 .industry-icon i {
     font-size: 2rem;
     color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .industry-item h3 {
@@ -1085,54 +1131,7 @@ html {
     color: #E74C3C;
 }
 
-/* Responsive Design for Industries */
-@media (max-width: 768px) {
-    .industries-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1.5rem;
-    }
-    
-    .industry-item {
-        padding: 1.5rem 1rem;
-    }
-    
-    .industry-icon {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 1rem;
-    }
-    
-    .industry-icon i {
-        font-size: 1.5rem;
-    }
-    
-    .industry-item h3 {
-        font-size: 1rem;
-    }
+/* Hover effects for icons */
+.industry-item:hover .industry-icon {
+    transform: scale(1.1) rotate(5deg);
 }
-
-@media (max-width: 480px) {
-    .industries-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .industry-item {
-        padding: 1rem 0.5rem;
-    }
-    
-    .industry-icon {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .industry-icon i {
-        font-size: 1.2rem;
-    }
-    
-    .industry-item h3 {
-        font-size: 0.9rem;
-    }
-}
-
-
